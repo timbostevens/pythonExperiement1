@@ -8,10 +8,28 @@
 
 	<p> At the moment it does nothing but contain a link to the data entry page</p>
 	
-	<a href="/demoApp/dataEntry">Data Entry</a>
-	<a href="/demoApp/dataDisplay">Data Display</a>
+	<a href="/demoApp/dataEntry" class="linkAsButton">Data Entry</a>
+	<a href="/demoApp/dataDisplay" class="linkAsButton">Data Display</a>
 	
 	<BR/>
 	<hr/>
 
+
+	<style>
+		.linkAsButton {
+		    -moz-appearance: button;
+		    -ms-appearance: button;
+		    -o-appearance: button;
+		    -webkit-appearance: button;
+		    appearance: button;
+		    text-decoration: none;
+		    color: #000;
+		    background-color: silver;
+		    padding: 0.2em 0.2em;
+		}​
+	</style>
+
 {% endblock %}
+
+
+
