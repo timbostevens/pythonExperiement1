@@ -1,11 +1,17 @@
-demoApp/templates/demoApp/index.html
 
-<H1>This is my index page</H1>
+<!-- Combine this page and the layout -->
+{% extends 'layout/layoutMain.html' %}
 
-<p> At the moment it does nothing but contain a link to the data entry page</p>
+{% block pageTitle%} SNES Games Home {% endblock %}
 
-<a href="/demoApp/dataEntry">Data Entry</a>
-<a href="/demoApp/dataDisplay">Data Display</a>
+{% block content %}
 
-<BR/>
-<hr/>
+	<p> At the moment it does nothing but contain a link to the data entry page</p>
+	
+	<a href="/demoApp/dataEntry">Data Entry</a>
+	<a href="/demoApp/dataDisplay">Data Display</a>
+	
+	<BR/>
+	<hr/>
+
+{% endblock %}
