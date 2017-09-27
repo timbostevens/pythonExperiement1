@@ -9,6 +9,17 @@ def index(request):
 def dataEntry(request):
     return render(request,'demoApp/dataEntry.html')
 
+def dataDisplay(request):
+    
+    
+    
+    # get data from database
+    data = SnesGame.objects.all()
+    
+    # what is the format of the third arument here?
+    return render(request, 'demoApp/dataDisplay.html', {"data":data})
+
+
 def inputView(request):
     
     

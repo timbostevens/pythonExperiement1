@@ -67,7 +67,30 @@
 
 
 
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Release Date</th>
+		<th>Rating</th>
+		<th>Description</th>
+	</tr>
 
+
+	{% for SnesGame in data %}
+	
+	
+	<tr>
+		<td>{{SnesGame.gameName}}</td>
+		<td>{{SnesGame.releaseDate}}</td>
+		<td>{{SnesGame.rating}}</td>
+		<td>{{SnesGame.description}}</td>
+	</tr>
+	
+	
+	
+	{% endfor %}
+
+</table>
 
 
 
