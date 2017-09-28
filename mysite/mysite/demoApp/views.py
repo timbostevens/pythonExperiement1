@@ -14,9 +14,19 @@ def dataDisplay(request):
     
     
     # get data from database
-    data = SnesGame.objects.all()
+    #data = SnesGame.objects.all()
     
-    # what is the format of the third arument here?
+    # gets a list (even if it only contains one result)
+    data = SnesGame.objects.filter(gameName="Mario")
+    
+    # this only gets one object (it will fall over if there is more than one)
+    #data = SnesGame.objects.get(gameName="Mario")
+    
+    # this is how to get by primary key
+    #data = SnesGame.objects.get(pk=1)
+
+    # the data object can be a single object or a list
+    # third arg is python dictionary object: key (can be anything) then value
     return render(request, 'demoApp/dataDisplay.html', {"data":data})
 
 
